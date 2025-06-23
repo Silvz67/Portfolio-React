@@ -421,22 +421,23 @@
       height: 110px;
     }
     .foto-perfil {
-      width: 90px;
-      height: 90px;
-      margin-bottom: 1rem;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 0.7rem;
     }
     .h1-main {
-      font-size: 1.3rem;
-      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
     }
     .p.main {
-      font-size: 1rem;
-      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.7rem;
     }
     .cabecalho {
-      min-height: 40vh;
-      padding-top: 60px;
-      padding-bottom: 20px;
+      min-height: 20vh;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      justify-content: flex-start;
     }
   }
   
@@ -467,5 +468,15 @@
   .destaque-verde {
     color: var(--primaria);
     font-weight: 700;
+  }
+  
+  .menu-link {
+    position: relative;
+    overflow: hidden;
+    transition: color 0.2s, transform 0.1s;
+  }
+  .menu-link:active {
+    color: var(--primaria);
+    transform: scale(0.92);
   }
   
