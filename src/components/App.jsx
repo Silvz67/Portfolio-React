@@ -107,7 +107,7 @@ function App() {
       </section>
 
       <section className="contato" id="contato">
-        <h2 className="contato-titulo">Entre em Contato</h2>
+        <h2 className="contato-titulo">Entr em Contato</h2>
         <form className="formulario-contato" onSubmit={enviarMensagem}>
           <input
             className="campo-form"
