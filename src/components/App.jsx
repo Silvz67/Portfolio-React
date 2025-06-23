@@ -5,6 +5,7 @@ function App() {
   const [nome, setNome] = useState("");
   const [mensagem, setMensagem] = useState("");
   const [tema, setTema] = useState(() => localStorage.getItem('tema') || 'light');
+  const [menuAberto, setMenuAberto] = useState(false);
 
   useEffect(() => {
     document.body.className = tema === 'dark' ? '' : 'tema-claro';
@@ -12,6 +13,9 @@ function App() {
   }, [tema]);
 
   const alternarTema = () => setTema(tema === 'light' ? 'dark' : 'light');
+
+  // Fecha o menu ao clicar em um link (mobile)
+  const handleMenuClick = () => setMenuAberto(false);
 
   function enviarMensagem(event) {
     event.preventDefault();
@@ -31,12 +35,16 @@ function App() {
               <img className="logo-git-anim" src="/imagens/icon-git.png" alt="github" />
             </a>
           </div>
-          <ul className="menu">
-            <li><a className="menu-link" href="#inicio">Início</a></li>
-            <li><a className="menu-link" href="#sobre">Sobre</a></li>
-            <li><a className="menu-link" href="#especialidades">Especialidades</a></li>
-            <li><a className="menu-link" href="#projetos">Projetos</a></li>
-            <li><a className="menu-link" href="#contato">Contatos</a></li>
+          <button className="hamburguer" onClick={() => setMenuAberto(!menuAberto)} aria-label="Abrir menu">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+          <ul className={`menu${menuAberto ? ' aberto' : ''}`}>
+            <li><a className="menu-link" href="#inicio" onClick={handleMenuClick}>Início</a></li>
+            <li><a className="menu-link" href="#sobre" onClick={handleMenuClick}>Sobre</a></li>
+            <li><a className="menu-link" href="#projetos" onClick={handleMenuClick}>Projetos</a></li>
+            <li><a className="menu-link" href="#contato" onClick={handleMenuClick}>Contatos</a></li>
           </ul>
           <button onClick={alternarTema} className="tema-toggle" aria-label="Alternar tema">
             {tema === 'light' ? '🌙' : '🌞'}
@@ -107,7 +115,7 @@ function App() {
       </section>
 
       <section className="contato" id="contato">
-        <h2 className="contato-titulo">Entr em Contato</h2>
+        <h2 className="contato-titulo">Entre em Contato</h2>
         <form className="formulario-contato" onSubmit={enviarMensagem}>
           <input
             className="campo-form"
