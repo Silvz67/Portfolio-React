@@ -442,7 +442,17 @@
       justify-content: flex-start;
     }
     .navegacao {
-      border-bottom: 2px solid var(--primaria);
+      border-bottom: 1px solid var(--primaria);
+    }
+    .logo {
+      display: none;
+    }
+    .menu.aberto ~ .logo {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1rem;
     }
     .menu.aberto ~ .tema-toggle,
     .menu.aberto ~ .hamburguer {
