@@ -8,7 +8,11 @@ function App() {
   const [menuAberto, setMenuAberto] = useState(false);
 
   useEffect(() => {
-    document.body.className = tema === 'dark' ? '' : 'tema-claro';
+    if (tema === 'light') {
+      document.body.classList.add('tema-claro');
+    } else {
+      document.body.classList.remove('tema-claro');
+    }
     localStorage.setItem('tema', tema);
   }, [tema]);
 
