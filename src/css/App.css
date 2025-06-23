@@ -421,8 +421,22 @@
       height: 110px;
     }
     .foto-perfil {
-      width: 120px;
-      height: 120px;
+      width: 90px;
+      height: 90px;
+      margin-bottom: 1rem;
+    }
+    .h1-main {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+    }
+    .p.main {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .cabecalho {
+      min-height: 40vh;
+      padding-top: 60px;
+      padding-bottom: 20px;
     }
   }
   
