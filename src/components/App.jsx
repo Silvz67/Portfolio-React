@@ -13,10 +13,8 @@ function App() {
     } else {
       document.body.classList.remove('tema-claro');
     }
-    localStorage.setItem('theme', tema);
+    localStorage.setItem('tema', tema);
   }, [tema]);
-
-  const alternarTema = () => setTema(tema === 'light' ? 'dark' : 'light');
 
   const handleMenuClick = () => setMenuAberto(false);
 
@@ -49,7 +47,7 @@ function App() {
             <li><a className="menu-link" href="#projetos" onClick={handleMenuClick}>Projetos</a></li>
             <li><a className="menu-link" href="#contato" onClick={handleMenuClick}>Contatos</a></li>
           </ul>
-          <button onClick={alternarTema} className="tema-toggle" aria-label="Alternar tema">
+          <button onClick={() => setTema(tema === 'light' ? 'dark' : 'light')} className="tema-toggle" aria-label="Alternar tema">
             {tema === 'light' ? '🌙' : '🌞'}
           </button>
         </div>
@@ -168,7 +166,7 @@ function App() {
 
       <footer>
         <div className="footer-content">
-        <span>© 2024 Artur Silva</span>
+          <span>© 2024 Artur Silva</span>
           <div className="social-links">
             <a href="https://github.com/Silvz67" target="_blank" rel="noopener noreferrer" className="social-link">
               <img src="/imagens/icon-git.png" alt="GitHub" />
