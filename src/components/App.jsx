@@ -168,7 +168,7 @@ function App() {
 
       <footer>
         <div className="footer-content">
-          <span>© 2024 Artur Silva</span>
+        <span>© 2024 Artur Silva</span>
           <div className="social-links">
             <a href="https://github.com/Silvz67" target="_blank" rel="noopener noreferrer" className="social-link">
               <img src="/imagens/icon-git.png" alt="GitHub" />
