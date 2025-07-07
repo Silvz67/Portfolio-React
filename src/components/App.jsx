@@ -13,7 +13,7 @@ function App() {
     } else {
       document.body.classList.remove('tema-claro');
     }
-    localStorage.setItem('tema', tema);
+    localStorage.setItem('theme', tema);
   }, [tema]);
 
   const alternarTema = () => setTema(tema === 'light' ? 'dark' : 'light');
